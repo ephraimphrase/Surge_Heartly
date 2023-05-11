@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart Attack Prediction Result</title>
+</head>
+<body>
+	{% if rf_pred == 1 %}
+		<h2>Prediction Results</h2>
+		<p>The patient is likely to have a heart attack in the near future.</p>
+		<p>The predicted probability of having a heart attack is: {{ nn_poss }}%</p>
+	{% else %}
+		<h2>Prediction Results</h2>
+		<p>The patient is unlikely to have a heart attack in the near future.</p>
+		<p>The predicted probability of having a heart attack is: {{ nn_poss }}%</p>
+	{% endif %}
+</body>
+</html>
